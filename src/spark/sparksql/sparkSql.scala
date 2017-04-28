@@ -18,7 +18,7 @@ object sparkSql {
     // Create the DataFrame
     val df = sqlContext.read.text("D:\\Desktop\\testSparkSql.txt")
 //    df.select("name").show()
-//    df.show()
+    df.show()
 
   }
 

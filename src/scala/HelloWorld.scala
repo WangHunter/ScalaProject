@@ -27,5 +27,5 @@ object HelloWorld {
     if (s == 0) 0 else if (s > 0) 1 else -1
   }
 
-  val kafkaStream =
+//  val kafkaStream =
 }
