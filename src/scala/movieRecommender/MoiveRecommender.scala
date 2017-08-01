@@ -21,14 +21,14 @@ object MoiveRecommender {
   val numRecommender = 10
 
   case class Params(
-                     input: String = null,
+                     input: String = "D://test//ml-100k//u.data",
                      numIterations: Int = 20,
                      lambda: Double = 1.0,
                      rank: Int = 10,
                      numUserBlocks: Int = -1,
                      numProductBlocks: Int = -1,
                      implicitPrefs: Boolean = false,
-                     userDataInput: String = null)
+                     userDataInput: String = "D://test//ml-100k//u.user")
 
   def main(args: Array[String]) {
 
@@ -85,7 +85,7 @@ object MoiveRecommender {
 
     //本地运行模式，读取本地的spark主目录
     var conf = new SparkConf().setAppName("Moive Recommendation")
-      .setSparkHome("D:\\work\\hadoop_lib\\spark-1.1.0-bin-hadoop2.4\\spark-1.1.0-bin-hadoop2.4")
+//      .setSparkHome("D:\\work\\hadoop_lib\\spark-1.1.0-bin-hadoop2.4\\spark-1.1.0-bin-hadoop2.4")
     conf.setMaster("local[*]")
 
     //集群运行模式，读取spark集群的环境变量
